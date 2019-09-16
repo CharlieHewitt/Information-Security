@@ -11,3 +11,8 @@ echo $(grep -c "#virusadded" *.sh)
 # echo "#virusadded" >> $test
 # fi
 
+# find . -name "*.sh"? or "./*.sh"?
+# need to for loop over files ending with ./*.sh
+# if [ $(cat file | grep -c "#addedvirus") -gt 0 ]
+# add virus else do w/e
+# -> Fix the for loop
