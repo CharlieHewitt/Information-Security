@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# assuming script is called from virus, will still work (will work away the error message)
-cd src
+# if script is called from virus (../src)
+if [ $(find . -type d -name src | grep src) ]
+then
+    cd src
+fi
 
 # creating test directory
 cp -a ../scripts ../test
