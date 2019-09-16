@@ -5,4 +5,4 @@ read num1
 echo -e "Please insert the Second number"
 read num2
 added=$(($num1 + $num2))
-echo -e $added
+echo -e "result = $added"
