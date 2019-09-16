@@ -1,1 +1,6 @@
+# mac os
 .DS_STORE
+
+# virus test directory (create using virus/src/setupTest.sh)
+virus/test
+
