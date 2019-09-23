@@ -40,7 +40,7 @@ int dlog(int g, int n, int a)
     return -1;
 }
 
-//
+// fix this as its not working as intended
 int babystep(int g, int n, int a)
 {
     // m = sqrt n
