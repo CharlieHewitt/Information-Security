@@ -58,7 +58,7 @@ int babystep(int g, int n, int a)
         std::cout << "Added pair " << power % n << ", " << j << std::endl;
     }
 
-    //  For loop is useless -> i always = 0? Is it just the value or is it a fluke?
+    //  For loop is useless -> i always = 0? Is it a fluke or are we not meant to do value - m * i
     for (int i = 0; i < m; i++)
     {
         auto it = map.find(a);
