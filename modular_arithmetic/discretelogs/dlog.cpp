@@ -20,16 +20,16 @@ int main(int argc, char **argv)
     // g to the what mod n = a
 
     std::cout << dlog(g, n, a) << std::endl;
-    //std::cout << babystep(g, n, a) << std::endl;
+    std::cout << babystep(g, n, a) << std::endl;
 }
 
 // brute force
 int dlog(int g, int n, int a)
 {
-    for (int i = 1; i < 100000; i++)
+    for (int i = 0; i < 100000; i++)
     {
         // calculate g^i
-        int power = pow(g, i);
+        int power = powersqm(g, i, n);
         if (power % n == a)
         {
             return i;
@@ -49,33 +49,82 @@ int babystep(int g, int n, int a)
     // initialise map
     std::unordered_map<int, int> map{};
 
-    // 0 <= j < m
-    for (int j = 0; j < m; j++)
+    // 0 <= j < n SHOULD BE M?
+    for (int j = 0; j < n; j++)
     {
-        int power = pow(g, j);
-        map.emplace(j, power);
+        // sq to multiply to stop overflowing
+        int power = powersqm(g, j, n);
+        map.emplace(power % n, j);
+        std::cout << "Added pair " << power % n << ", " << j << std::endl;
     }
 
-    // a^-m
-    int factor = pow(a, -m);
-
-    //variable to store updated a
-    int y = a;
-
-    // 0 <= i < m
+    //  For loop is useless -> i always = 0? Is it just the value or is it a fluke?
     for (int i = 0; i < m; i++)
     {
-        auto it = map.find(y);
+        auto it = map.find(a);
         if (it != map.end())
         {
+            auto key = it->first;
             auto value = it->second;
-            return (i * m + value);
+            std::cout << "Found pair " << key << ", " << value << std::endl;
+            std::cout << value << " - " << m << " * " << i << std::endl;
+            return (value - m * i);
+        }
+    }
+    // Sasa : Might not work if neg, add n-1 (to get in mod range) (otherwise mod inverses ...)
+
+    return -1;
+}
+
+int powersqm(int a, int b, int n)
+{
+    //convert h to binary
+    int binaryPower[64];
+    int index = -1;
+
+    for (int i = 0; i < 64; i++)
+    {
+        binaryPower[i] = 0;
+    }
+    while (b > 0)
+    {
+        index++;
+
+        if (b % 2 == 1)
+        {
+            binaryPower[index] = 1;
         }
         else
         {
-            y = y * factor % n;
+            binaryPower[index] = 0;
         }
+
+        b /= 2;
     }
 
-    return -1;
+    for (int i = 0; i < 64; i++)
+    {
+        // cout << binaryPower[i];
+    }
+
+    //cout << endl;
+
+    int pow = a;
+    int result = 1;
+
+    int counter = 0;
+    while (counter <= index)
+    {
+
+        if (binaryPower[counter] == 1)
+        {
+            result = (result * pow) % n;
+        }
+
+        pow = (pow * pow) % n;
+
+        counter++;
+    }
+
+    return result;
 }
