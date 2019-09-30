@@ -89,7 +89,7 @@ int babystep(int g, int n, int a)
 
 int powersqm(int a, int b, int n) //does the thing where it splits the powers until its own to its lowest number of calculations
 {
-    //convert h to binary
+    //convert b to binary
     int binaryPower[64];
     int index = -1;
 

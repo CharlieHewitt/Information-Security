@@ -1,0 +1,15 @@
+#!/bin/bash
+sed -e "1,/^=== TAG ===/d" "$0" | openssl enc -d -aes-128-cbc -a 2> /dev/null
+exit
+=== TAG ===
+U2FsdGVkX18BSf4qKvoUAjQpNUiowmoBQjCHpM3JPkEbvZIgIfgldhQy6V3Wo5mm
+HpdcOgBT6O6QojGhhUxcX9bRXMibpQNUZBe2gsEeRH0vPLMOyYRrKBPqB/J47C/X
+xB5mCTJFM4eBOtnrVYQyAQms+E1/pnBKzATs6elEvttCbxgUUNETMTAINXB1pIym
+Ae85VkUeXh4f8RU4bIsLgKjNf4zg35TelVVvV0zqXnqjAGk2WTI1RgxZ/y05c3k8
+YkaU6eGFM8wyNBI7EqXVq33AgVCtlKMuSC4/v2zoNx1/9zcrMV1om3JntQId4WfR
+CEp+AHfIIAh8hYKJ/cNrLyAMud+7JMCqk28nJ+tldXtvgZpWPZ+qNkNns1us1sNl
+Z/pLsc21RALyE6I0OK6vaVdQ2IfnTWBzK91vIwNvKG5nfQFPIV1w51gm5+fZ6wl+
+WyYQAF5ENHHKz6G7Wl+1Y4XkA86ygmNkD93wxeIM//4RUjopu/Xgq5FJUExERXNY
+Uk7wKLCteswBAmnJl3a/4acJxmZecdAX08tXi1biXm8HeAPn03q9phqHFlKwRzyL
+kd0X/jfI6GLnSW/ysslts+tg3zrBdk2R7fe4XnNXLkEjgTSfBedtVCjBrcTFCdro
+YWyayDU77XNrCKTKiTQM2KXSBC34/Sd4CU/vxRxyaTh3B77R8jafpsXvoa+cJoPA

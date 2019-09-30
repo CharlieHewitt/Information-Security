@@ -1,0 +1,6 @@
+Instructions
+
+Decrypt the following ciphertext to learn the password that was used 
+to encrypt the next zip file:
+
+GUVF PVCURE VF PNYYRQ EBG GUVEGRRA NAQ LBH UNIR PENPXRQ VG JRYY QBAR LBHE CNFFJBEQ VF PHYYRAFXVAX

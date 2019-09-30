@@ -1,0 +1,22 @@
+Your level 5 code is: C-af9d-2666-Z
+
+Instructions for level 6:
+
+Alice and Bob have encrypted the zip file for your next level.
+Alice chose the encryption key K and Bob wanted to know what the 
+key is. So Alice xored the key K with a random bit string R. 
+Alice sent K xor R to Bob.  Bob didn't have R, so he created a new
+random bit string S and sent K xor R xor S  back to Alice. 
+Alice then removed her random bit string and sent the result, 
+i.e., K xor S back to Bob. Now Bob could decrypt the key K by 
+removing his own S. Alice and Bob know your key. Eve observed the
+entire conversation and she says that the following are the three
+messages exchanged between Alice and Bob. The messages' bitstrings
+are shown encoded as hexadecimal values.
+
+Alice to Bob: 9759c5b363745b15b6930ca65a508ded
+Bob to Alice: b7be83d5415c703336b36d81fb803c7f
+Alice to Bob: dc036d206d1421d727a53e802dcf986e
+
+Find the key K and decrypt the zip file for your next level.
+It was encrypted with RC4 using OpenSSL.

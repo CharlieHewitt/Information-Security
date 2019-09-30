@@ -1,0 +1,8 @@
+#!/bin/bash
+sed -e "1,/^=== TAG ===/d" "$0" | openssl enc -d -aes-128-cbc -a 2> /dev/null
+exit
+=== TAG ===
+U2FsdGVkX1/HWp6+zLHHZxxwmPCItX+LVNoKeqrLsbVpaZc971f1yrO0VwABq1fB
+nWnchSNHWrCc2ofGYHPS/vSpGVyD1kBuZtUeO6Bs4baPecB4v2hauwy7hoWdMw8Q
+z6ZN8i0whQPwW6auZU+glQ/IjVkOAki2uvk8kJiRv4VvuheU6DqxpVeBzbyACSQQ
+2r+NEaBHOqvPGHF4FoqoZA==

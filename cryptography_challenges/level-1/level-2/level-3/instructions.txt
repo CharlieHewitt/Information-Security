@@ -1,0 +1,12 @@
+Your level 3 code is: C-b8b6-5231-Z
+
+Instructions for level 4:
+
+1. Read an openssl command line tutorial. For example:
+   https://users.dcc.uchile.cl/~pcamacho/tutorial/crypto/openssl/openssl_intro.html
+
+2. Decrypt the encrypted zip file in this directory.
+   The file was encrypted with OpenSSL. 
+   The cipher is AES-128 in cipher block chaining mode.
+   The hex key for the encryption is b067a7ee9a159b724d5261dc80e03124
+   The initialization vector is d125c5bd3f085467425bd07b3bc5cecc

@@ -1,0 +1,20 @@
+#!/bin/bash
+sed -e "1,/^=== TAG ===/d" "$0" | openssl enc -d -aes-128-cbc -a 2> /dev/null
+exit
+=== TAG ===
+U2FsdGVkX18zxFohFrAE6jrv0XQWleRdSKxUa1tTpwTfc6+L2narVP+TDKTBII4M
+Z5Ye5f4JwFR0N5e1FA44knOpKyvK/vscHhmmrMmQWeCujKuhpKdO+wrqOi+/yRSm
+BaMed8DCJzBaSTAgXq1xkwCqvl1htotRWxY0hVr+2h73ZYtG6jykqRguDgoxveOS
+8VY2bitZloTjwCh9thwCtXfbPkvZrhK6xwJFBfYCfPWP9Fekq+f4zhwIEr1/DlNg
+3lmNRJhFaVM2FDm9I9zjGpJbSSohrvrJQd5xU5uqOrmwoigK0GvbtBhiwuRs2Vdc
+q+PvoIDk0dj0vBqHHN8y4G0I1hRUmqZnbOIlcj2OvWzAJeCMTgnpOryKJmnyf0bq
+BzqYL/uMW9Xqe5qFe77V1R7dlPM1ADgGl92Tag4oB2Z3eAH1iVe5m58Vb9fm2Y75
+mWyhyj1SzcqxsdoVRv9sUfm33uVrRAoWeezNWTpfHC3jVx4mBa8kA9X7GQkiADXh
+Ttbr/qPmvpI/1TOPHRTcbKG4+Kf3Q+9Pme00lH8Ixpe7q4OJAL20gCkaZoIYTWu6
+I+PXdWR4B8yKnEwhLFy06/MnwZjKrLhWd4BEIUFuYZXM+iLa5vK43axwJ5JkR56P
+vdzM3OLERo+m96cgLWIVptBqpDzMJM/mat+qTbyWO6JtM+MVYCwRmMEdWljwyj/A
+yYVyz1D2wTatph68rav/pZbK5i9shNsNkOWfCS8EkzBM/KDIXR/WrzF9eaWW+HU0
+0dGekwljHM8RqEihlcz2hZfx5e0DwGEYON4wlH4dEhtsFwT5aplI0mIltf2UOgV3
+SvJHDOXaVYiEoUYTweDEsZeJgKIrRS8MJYLWkKLU2JW/BB9YBMijgMtuD9hk34qp
+HJKl+tUPIYzLGUzm/OMHxTENo8AqtaWnDWv/PhRZ7+nMkbMOptzStxlfg6A0l51v
+n+MXGfbo8UbaWFoJQ4e0lQ==

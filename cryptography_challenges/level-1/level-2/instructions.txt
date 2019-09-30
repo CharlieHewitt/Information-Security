@@ -1,0 +1,10 @@
+Your level 2 code is: C-afaa-a018-Z
+
+Instructions for level 3:
+
+Decrypt the following ciphertext to learn the password that was used 
+to encrypt the next zip file. Most of the plain text contains a quote
+about secrets. 
+
+THXKK WFR LKKN F UKWXKT, OM TBA AM THKQ FXK JKFJ. (GKRPFQOR MXFRLEOR)
+NRSP MHBBORPK IB  WSGGVPCSG-BQSHBA.
