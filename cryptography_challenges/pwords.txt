@@ -1,4 +1,11 @@
-level 2: cullenskink
-level 3: butternut-squash
-level 4: openssl enc -d -aes-128-cbc -iv d125c5bd3f085467425bd07b3bc5cecc -K b067a7ee9a159b724d5261dc80e03124 -in level-4.zip.enc -out out.zip
-level 5: openssl enc -d -base64 -in level-5.zip.enc -out out.zip -v (64 chars a line, 64 diff chars -> base 64)
+passwords:
+    level 2: cullenskink
+    level 3: butternut-squash
+    level 4: openssl enc -d -aes-128-cbc -iv d125c5bd3f085467425bd07b3bc5cecc -K b067a7ee9a159b724d5261dc80e03124 -in level-4.zip.enc -out out.zip
+    level 5: openssl enc -d -base64 -in level-5.zip.enc -out out.zip -v (64 chars a line, 64 diff chars -> base 64)
+    level 6: openssl enc -d -rc4 -K fce42b464f3c0af1a7855fa78c1f29fc -in level-6.zip.enc -out out.zip 
+
+extra:
+    level 6:
+    ((K xor R xor S) xor (K xor S)) = R
+    (R xor (K xor R)) = K (hex -> bin conversions and back)
