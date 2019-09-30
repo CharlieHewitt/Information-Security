@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include "dlog.h"
-#include "unordered_map"
+#include <unordered_map>
 #include <utility>
 
 int main(int argc, char **argv)
@@ -49,26 +49,37 @@ int babystep(int g, int n, int a)
     // initialise map
     std::unordered_map<int, int> map{};
 
-    // 0 <= j < n SHOULD BE M?
-    for (int j = 0; j < n; j++)
+    // 0 <= i =< m
+    for (int i = 0; i <= m; i++)
     {
         // sq to multiply to stop overflowing
-        int power = powersqm(g, j, n);
-        map.emplace(power % n, j);
-        std::cout << "Added pair " << power % n << ", " << j << std::endl;
+        int power = powersqm(g, i, n);
+        map.emplace(power % n, i);
+        std::cout << "Added pair " << power % n << ", " << i << std::endl;
     }
 
-    //  For loop is useless -> i always = 0? Is it a fluke or are we not meant to do value - m * i
-    for (int i = 0; i < m; i++)
+    // taking steps of g^m starting from a (= g^x % n)
+    for (int k = 0; k < m; k++)
     {
-        auto it = map.find(a);
+        std::cout << "searching with k= " << k << std::endl;
+
+        // current power = k * m
+        int currentPow = k * m;
+
+        // value to look up in table : (a * g^km)
+        int currentTableKey = (a * powersqm(g, currentPow, n) % n);
+        auto it = map.find(currentTableKey);
+
         if (it != map.end())
         {
+            // for debugging purposes
             auto key = it->first;
             auto value = it->second;
             std::cout << "Found pair " << key << ", " << value << std::endl;
-            std::cout << value << " - " << m << " * " << i << std::endl;
-            return (value - m * i);
+            std::cout << currentTableKey << " - " << m << " * " << k << std::endl;
+
+            // x = j - km
+            return (value - currentPow);
         }
     }
     // Sasa : Might not work if neg, add n-1 (to get in mod range) (otherwise mod inverses ...)
@@ -76,7 +87,7 @@ int babystep(int g, int n, int a)
     return -1;
 }
 
-int powersqm(int a, int b, int n)
+int powersqm(int a, int b, int n) //does the thing where it splits the powers until its own to its lowest number of calculations
 {
     //convert h to binary
     int binaryPower[64];
