@@ -9,3 +9,5 @@ extra:
     level 6:
     ((K xor R xor S) xor (K xor S)) = R
     (R xor (K xor R)) = K (hex -> bin conversions and back)
+    
+level 7: gpg --output level-7.zip --decrypt level-7.zip.enc
