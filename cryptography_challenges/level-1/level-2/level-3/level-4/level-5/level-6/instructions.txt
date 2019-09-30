@@ -1,0 +1,12 @@
+Your level 6 code is: C-28fd-db47-Z
+
+Instructions for level 7:
+
+1. Read about GPG (Gnu Privacy Guard): https://gnupg.org/
+   Out of all the encryption and decryption tools that you are dealing
+   with in this assignment, GPG is the only one that is meant for
+   day-to-day use. It is the right tool to encrypt files and email
+   for example.
+
+2. Use the password e7eb568b676412e30aa599b7405b3fb5 
+   to decrypt the gpg encrypted zip file in this directory.
