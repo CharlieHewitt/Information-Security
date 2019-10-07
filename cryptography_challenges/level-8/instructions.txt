@@ -1,0 +1,31 @@
+Your level 8 code is: C-61d1-5d9e-Z
+
+Instructions for level 9:
+
+You are given a decryption key that has unfortunately been corrupted: 
+a small number of bits (no more than 3) in the key have been changed.
+Reconstruct the correct key and use it together with the supplied iv to 
+decrypt the next level's zip file.
+
+To help you with this task, the sha-1 hash of the correct key is also 
+available. The sha-1 hash has been computed as follows: 
+echo -n "HEX STRING OF KEY HERE" | openssl sha1
+
+Cipher used:  AES-128-CBC
+Faulty, corrupt key:                  5839bc0cc4c730c8d7088b9f030aede1
+SHA-1 hash of correct hex key string: 3ee6c7af81e1a422a79cf564469bdfbf0dc62517
+Initialization vector:                b09fc80189bd9aefb91c803a903f18f7
+
+Suggested steps:
+
+1. Try all combinations of up to 3 bit flips of the provided key.
+
+2. While your search is ongoing (there are up to 349633 guesses to make)
+   you will want to prepare for one of the next tasks. Start reading
+   about two-time pads and "crib dragging". 
+
+3. Once you have found the key, decrypt the encrypted zip 
+   file in this directory.
+   The file was encrypted with OpenSSL. 
+   The cipher is AES-128 in cipher block chaining mode.
+   The initialization vector is b09fc80189bd9aefb91c803a903f18f7.

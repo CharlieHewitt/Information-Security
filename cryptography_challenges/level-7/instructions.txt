@@ -1,0 +1,12 @@
+Your level 7 code is: C-9a2d-1348-Z
+
+Instructions for level 8:
+
+The password file has been encrypted with gpg and a 4-digit PIN code. 
+The encryption was
+gpg --pinentry-mode loopback --batch --passphrase "(some PIN here)" --cipher-algo AES -ac -o password.enc password 
+
+1. Brute force the 4-digit PIN code to decrypt the password file.
+
+2. Use the password file to decrypt the next zip file. 
+

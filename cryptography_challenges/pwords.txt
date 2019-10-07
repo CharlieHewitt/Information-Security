@@ -5,6 +5,7 @@ passwords:
     level 5: openssl enc -d -base64 -in level-5.zip.enc -out out.zip -v 
     level 6: openssl enc -d -rc4 -K fce42b464f3c0af1a7855fa78c1f29fc -in level-6.zip.enc -out out.zip
     level 7: gpg --output level-7.zip --decrypt level-7.zip.enc
+    level 8: see script, 0530
 
 extra:
     level 5:
