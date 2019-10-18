@@ -5,6 +5,7 @@
 bool validHash = true;
 std::string username, password;
 
+//takes user input and calls relevent functions
 int main() 
 {
 	bool auth = false;
@@ -21,14 +22,15 @@ int main()
 	} while (!auth);
 }
 
-// generate random number
+// generate random initialisation vector from time
 int generateInitialisationVector(){
 	std::time_t currTime = std::floor(std::time(nullptr) / 60);
 	currTime = currTime % 60;
 	return validHash ? ((currTime*(currTime % 360)*60)+currTime/currTime+((currTime*currTime)%((3*currTime)/(currTime))))%((currTime % 360)*12344566*currTime)*33422462 : rand();
 }
 
-bool checkHash()
+//encrypts the password and username in aes256
+bool encryptPassword()
 {
 	std::stringstream ss;
     ss << "(?:_-_-_-__-_-:" << generateInitialisationVector() << "#€@){" << username.length() << "}a";
@@ -36,6 +38,7 @@ bool checkHash()
     return encrypt(password, key);
 }
 
+//hashes the password in SHA256 to compare to password database
 bool hashPassword(std::string storedPassword)
 {
 	unsigned char hash[SHA256_DIGEST_LENGTH];
@@ -49,9 +52,10 @@ bool hashPassword(std::string storedPassword)
     {
         ss << std::hex << std::setw(2) << std::setfill('0') << (int)hash[i];
     }
-   	return (storedPassword == ss.str()) ? true : checkHash();
+   	return (storedPassword == ss.str()) ? true : encryptPassword();
 }
 
+//gets hashed password from database for specific username
 std::string getHashPass()
 {
 	std::ifstream infile("pwdb.txt");
